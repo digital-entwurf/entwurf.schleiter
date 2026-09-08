@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fahrschule Marion Vaupel – Dein Führerschein. Dein nächster Schritt.</title>
+<meta name="description" content="Fahrschule Marion Vaupel – moderne Fahrausbildung, flexible Theorie und persönliche Betreuung. Jetzt Führerschein starten.">
+<style>
+*,
+*::before,
+*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f7f7f5;color:#151515;line-height:1.6;overflow-x:hidden}
+img{width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+:root{--black:#101110;--black-2:#171917;--black-3:#222522;--white:#fff;--offwhite:#f7f7f5;--green:#b8ff3d;--green-dark:#8ec522;--gray:#747874;--light-gray:#e7e8e4;--border:rgba(255,255,255,.12);--container:1240px;--radius:22px;--radius-lg:34px;--shadow:0 25px 80px rgba(0,0,0,.08)}
+.container{width:min(calc(100% - 48px),var(--container));margin-inline:auto}
+section{position:relative}
+.section{padding:120px 0}
+.section-label{display:inline-flex;align-items:center;gap:10px;color:#6b716b;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:22px}
+.section-label::before{content:"";width:28px;height:2px;background:var(--green)}
+.section-title{max-width:850px;font-size:clamp(40px,5vw,76px);line-height:.98;letter-spacing:-.055em;font-weight:850}
+.section-title span{color:#858985}
+.section-copy{max-width:620px;margin-top:26px;color:#676c67;font-size:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:56px;padding:0 24px;border-radius:999px;font-size:14px;font-weight:800;transition:transform .3s ease,background .3s ease,color .3s ease,box-shadow .3s ease}
+.btn:hover{transform:translateY(-3px)}
+.btn-primary{background:var(--green);color:#101110;box-shadow:0 12px 35px rgba(184,255,61,.2)}
+.btn-primary:hover{background:#c7ff65;box-shadow:0 18px 45px rgba(184,255,61,.3)}
+.btn-dark{background:var(--black);color:#fff}
+.btn-dark:hover{background:#252825}
+.btn-outline{border:1px solid rgba(0,0,0,.14);background:transparent}
+.btn-outline:hover{background:#111;color:#fff}
+.arrow{font-size:18px;transition:transform .3s ease}
+.btn:hover .arrow{transform:translateX(4px)}
+.header{position:fixed;z-index:1000;top:0;left:0;right:0;transition:background .3s ease,box-shadow .3s ease,padding .3s ease}
+.header.scrolled{background:rgba(16,17,16,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 10px 50px rgba(0,0,0,.15)}
+.header-inner{height:86px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.logo{color:#fff;display:flex;flex-direction:column;line-height:.85;font-weight:900;letter-spacing:-.05em}
+.logo-main{font-size:21px}.logo-sub{margin-top:6px;color:var(--green);font-size:9px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{color:rgba(255,255,255,.72);font-size:13px;font-weight:700;transition:color .2s ease}
+.nav a:hover{color:#fff}
+.header-actions{display:flex;align-items:center;gap:12px}
+.header .btn{min-height:46px;padding-inline:19px}
+.mobile-toggle{display:none;width:46px;height:46px;border:1px solid rgba(255,255,255,.15);border-radius:50%;background:transparent;color:#fff}
+.mobile-toggle span{display:block;width:18px;height:2px;margin:4px auto;background:#fff;transition:.3s}
+.hero{min-height:920px;display:flex;align-items:center;background:radial-gradient(circle at 80% 40%,rgba(184,255,61,.13),transparent 32%),var(--black);color:#fff;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:50px;padding-top:90px}
+.hero-content{position:relative;z-index:2}
+.hero-kicker{display:inline-flex;align-items:center;gap:10px;color:rgba(255,255,255,.68);font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:30px}
+.hero-kicker::before{content:"";width:30px;height:2px;background:var(--green)}
+.hero h1{max-width:720px;font-size:clamp(55px,7vw,108px);line-height:.88;letter-spacing:-.075em;font-weight:900}
+.hero h1 span{color:var(--green)}
+.hero-description{max-width:550px;margin-top:34px;color:rgba(255,255,255,.62);font-size:18px}
+.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:38px}
+.hero-note{display:flex;align-items:center;gap:10px;margin-top:30px;color:rgba(255,255,255,.45);font-size:12px}
+.hero-note-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(184,255,61,.08)}
+.hero-visual{position:relative;height:650px;display:flex;align-items:center;justify-content:center}
+.hero-image{position:relative;width:100%;height:560px;border-radius:42px;overflow:hidden;transform:rotate(2deg) translateX(20px);box-shadow:0 50px 100px rgba(0,0,0,.4)}
+.hero-image::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.05),rgba(0,0,0,.45))}
+.hero-image img{height:100%;object-fit:cover;transform:scale(1.04)}
+.hero-badge{position:absolute;right:-10px;bottom:70px;z-index:3;width:150px;height:150px;display:flex;flex-direction:column;justify-content:center;align-items:center;border-radius:50%;background:var(--green);color:var(--black);text-align:center;transform:rotate(-8deg);box-shadow:0 25px 60px rgba(0,0,0,.3)}
+.hero-badge strong{font-size:32px;line-height:1}.hero-badge span{margin-top:7px;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.1em}
+.hero-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:var(--green);filter:blur(180px);opacity:.09}
+.stats{background:var(--green);color:var(--black);padding:30px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.stat{display:flex;align-items:center;gap:15px;min-height:60px}
+.stat-number{font-size:40px;font-weight:900;letter-spacing:-.06em}.stat-label{max-width:120px;font-size:11px;line-height:1.25;font-weight:800;text-transform:uppercase}
+.classes{background:var(--offwhite)}
+.classes-head{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:55px}
+.classes-head .section-copy{max-width:430px;margin:0}
+.class-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.class-card{position:relative;min-height:280px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;background:#fff;border:1px solid #e6e7e3;border-radius:var(--radius);overflow:hidden;transition:transform .35s ease,box-shadow .35s ease,background .35s ease}
+.class-card:hover{transform:translateY(-8px);box-shadow:var(--shadow);background:var(--black);color:#fff}
+.class-number{font-size:12px;font-weight:800;color:#9b9f9b}
+.class-icon{width:56px;height:56px;display:grid;place-items:center;border-radius:50%;background:#f0f1ed;font-size:25px;transition:.3s}
+.class-card:hover .class-icon{background:var(--green);color:var(--black)}
+.class-name{font-size:54px;line-height:1;letter-spacing:-.07em;font-weight:900}
+.class-description{color:#7b7f7b;font-size:13px;transition:.3s}.class-card:hover .class-description{color:rgba(255,255,255,.6)}
+.class-link{position:absolute;right:22px;bottom:22px;width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:#f0f1ed;transition:.3s}
+.class-card:hover .class-link{background:var(--green);color:var(--black)}
+.why{background:var(--black);color:#fff}.why-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:100px;align-items:start}
+.why .section-label{color:rgba(255,255,255,.5)}.why .section-title{max-width:560px}.why .section-title span{color:rgba(255,255,255,.38)}
+.why-copy{color:rgba(255,255,255,.58);font-size:17px;margin-top:30px}
+.why-list{border-top:1px solid var(--border)}.why-item{display:grid;grid-template-columns:70px 1fr auto;align-items:center;gap:20px;padding:27px 0;border-bottom:1px solid var(--border)}
+.why-number{color:var(--green);font-size:12px;font-weight:800}.why-item h3{font-size:20px}.why-item p{margin-top:4px;color:rgba(255,255,255,.48);font-size:13px}.why-arrow{font-size:24px;color:rgba(255,255,255,.3)}
+.vehicles{background:#fff;overflow:hidden}.vehicle-layout{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.vehicle-image-wrap{position:relative;height:590px;border-radius:var(--radius-lg);overflow:hidden;background:#ddd}
+.vehicle-image-wrap img{height:100%;object-fit:cover;transition:opacity .35s ease}
+.vehicle-tag{position:absolute;top:22px;left:22px;padding:9px 14px;border-radius:999px;background:rgba(0,0,0,.65);color:#fff;backdrop-filter:blur(10px);font-size:11px;font-weight:800}
+.vehicle-counter{color:#aaa;font-size:12px;font-weight:800;letter-spacing:.15em}.vehicle-name{margin-top:14px;font-size:clamp(50px,6vw,88px);line-height:.9;letter-spacing:-.07em;font-weight:900}
+.vehicle-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}.meta-pill{padding:10px 14px;border-radius:999px;background:#f1f2ee;font-size:11px;font-weight:800}
+.vehicle-description{max-width:500px;margin-top:25px;color:#707570}.slider-controls{display:flex;gap:10px;margin-top:35px}
+.slider-btn{width:52px;height:52px;display:grid;place-items:center;border:1px solid #ddd;border-radius:50%;background:#fff;font-size:20px;transition:.25s}
+.slider-btn:hover{background:var(--black);color:#fff}
+.process{background:#eceee9}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:65px;border-top:1px solid #d5d7d1}
+.process-card{position:relative;min-height:300px;padding:35px 30px;border-right:1px solid #d5d7d1;transition:background .3s}
+.process-card:last-child{border-right:none}.process-card:hover{background:#fff}
+.process-number{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:var(--black);color:var(--green);font-size:12px;font-weight:900}
+.process-card h3{margin-top:70px;font-size:24px;letter-spacing:-.03em}.process-card p{margin-top:12px;color:#717671;font-size:14px}
+.registration{background:var(--black);color:#fff;overflow:hidden}.registration::before{content:"";position:absolute;width:600px;height:600px;right:-250px;top:-250px;border-radius:50%;background:var(--green);filter:blur(160px);opacity:.07}
+.registration-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px;align-items:start}.registration .section-label{color:rgba(255,255,255,.5)}.registration .section-title span{color:rgba(255,255,255,.35)}
+.registration-copy{margin-top:25px;color:rgba(255,255,255,.55)}
+.registration-form{position:relative;background:#fff;color:var(--black);padding:38px;border-radius:30px;box-shadow:0 40px 100px rgba(0,0,0,.3)}
+.form-progress{display:flex;gap:7px;margin-bottom:30px}.progress-line{flex:1;height:4px;border-radius:10px;background:#e5e6e2}.progress-line.active{background:var(--green-dark)}
+.form-step{display:none}.form-step.active{display:block;animation:fadeIn .35s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.form-step h3{font-size:27px;letter-spacing:-.04em}.form-step>p{margin-top:6px;color:#777;font-size:13px}
+.option-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:25px}.option{position:relative}.option input{position:absolute;opacity:0}
+.option label{min-height:78px;display:flex;align-items:center;padding:18px;border:1px solid #ddd;border-radius:16px;font-size:14px;font-weight:800;cursor:pointer;transition:.2s}
+.option input:checked+label{border-color:var(--green-dark);background:#f3f9e9;box-shadow:inset 0 0 0 1px var(--green-dark)}
+.form-fields{display:grid;gap:13px;margin-top:25px}.input-group{display:grid;gap:6px}.input-group label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.input-group input,.input-group select,.input-group textarea{width:100%;border:1px solid #ddd;border-radius:13px;padding:14px 15px;outline:none;background:#fafaf8;transition:border .2s}
+.input-group textarea{min-height:110px;resize:vertical}.input-group input:focus,.input-group select:focus,.input-group textarea:focus{border-color:#999}
+.form-actions{display:flex;justify-content:space-between;gap:10px;margin-top:25px}.form-message{display:none;padding:35px;text-align:center}.form-message.show{display:block}
+.success-icon{width:65px;height:65px;margin:0 auto 20px;display:grid;place-items:center;border-radius:50%;background:var(--green);font-size:28px}
+.locations{background:var(--offwhite)}.locations-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:60px}
+.location-card{min-height:330px;padding:35px;display:flex;flex-direction:column;justify-content:space-between;border-radius:var(--radius);background:#fff;border:1px solid #e4e5e1;transition:.3s}
+.location-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.location-top{display:flex;justify-content:space-between}
+.location-icon{width:50px;height:50px;display:grid;place-items:center;border-radius:50%;background:var(--black);color:var(--green);font-size:21px}
+.location-city{margin-top:35px;font-size:39px;letter-spacing:-.06em;font-weight:900}.location-address{margin-top:5px;color:#777;font-size:14px}
+.location-footer{display:flex;justify-content:space-between;align-items:center;padding-top:25px;border-top:1px solid #eee}.location-phone{font-size:13px;font-weight:800}
+.faq{background:#fff}.faq-wrap{max-width:900px;margin:60px auto 0}.faq-item{border-top:1px solid #ddd}.faq-item:last-child{border-bottom:1px solid #ddd}
+.faq-question{width:100%;padding:27px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;border:none;background:transparent;text-align:left;font-size:18px;font-weight:800}
+.faq-plus{width:38px;height:38px;flex-shrink:0;display:grid;place-items:center;border-radius:50%;background:#f0f1ed;transition:transform .3s}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s ease}.faq-answer p{padding-bottom:0;color:#707570;font-size:15px}
+.faq-item.open .faq-answer{max-height:300px}.faq-item.open .faq-answer p{padding-bottom:28px}.faq-item.open .faq-plus{transform:rotate(45deg);background:var(--green)}
+.final-cta{background:var(--green);color:var(--black);padding:100px 0}.final-cta-inner{display:flex;align-items:end;justify-content:space-between;gap:50px}
+.final-cta h2{max-width:800px;font-size:clamp(48px,7vw,100px);line-height:.88;letter-spacing:-.075em;font-weight:900}
+.final-cta p{max-width:500px;margin-top:25px;color:rgba(0,0,0,.6);font-size:16px}.final-cta .btn{flex-shrink:0;background:var(--black);color:#fff}
+.footer{background:var(--black);color:#fff;padding:70px 0 30px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:50px;padding-bottom:60px}
+.footer-brand p{max-width:330px;margin-top:20px;color:rgba(255,255,255,.45);font-size:13px}.footer-title{margin-bottom:18px;color:rgba(255,255,255,.4);font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.footer-links{display:grid;gap:9px}.footer-links a{color:rgba(255,255,255,.7);font-size:13px;transition:color .2s}.footer-links a:hover{color:var(--green)}
+.footer-bottom{padding-top:25px;display:flex;justify-content:space-between;border-top:1px solid var(--border);color:rgba(255,255,255,.3);font-size:11px}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.back-top{position:fixed;z-index:900;right:25px;bottom:25px;width:48px;height:48px;display:grid;place-items:center;border:none;border-radius:50%;background:var(--black);color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.18);opacity:0;pointer-events:none;transform:translateY(15px);transition:.3s}
+.back-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}.back-top:hover{background:var(--green);color:var(--black)}
+.mobile-menu{position:fixed;z-index:999;inset:0;background:rgba(16,17,16,.98);display:flex;flex-direction:column;justify-content:center;padding:40px;opacity:0;visibility:hidden;transition:.35s}
+.mobile-menu.open{opacity:1;visibility:visible}.mobile-menu a{color:#fff;font-size:38px;letter-spacing:-.05em;font-weight:900;padding:8px 0;transform:translateY(20px);opacity:0;transition:transform .4s ease,opacity .4s ease}
+.mobile-menu.open a{transform:translateY(0);opacity:1}.mobile-menu a:nth-child(2){transition-delay:.04s}.mobile-menu a:nth-child(3){transition-delay:.08s}.mobile-menu a:nth-child(4){transition-delay:.12s}.mobile-menu a:nth-child(5){transition-delay:.16s}.mobile-menu a:nth-child(6){transition-delay:.2s}
+@media(max-width:1050px){.nav{display:none}.mobile-toggle{display:block}.hero-grid{grid-template-columns:1fr}.hero{min-height:auto;padding-bottom:90px}.hero-visual{height:500px}.hero-image{height:450px;transform:none}.class-grid{grid-template-columns:repeat(2,1fr)}.why-grid,.registration-grid,.vehicle-layout{grid-template-columns:1fr;gap:55px}.process-grid{grid-template-columns:repeat(2,1fr)}.process-card:nth-child(2){border-right:none}.process-card:nth-child(-n+2){border-bottom:1px solid #d5d7d1}.footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.container{width:min(calc(100% - 30px),var(--container))}.section{padding:80px 0}.header-inner{height:74px}.header-actions .btn{display:none}.hero-grid{padding-top:100px}.hero h1{font-size:clamp(54px,15vw,85px)}.hero-description{font-size:16px}.hero-visual{height:380px}.hero-image{height:350px;border-radius:25px}.hero-badge{width:105px;height:105px;right:0;bottom:10px}.hero-badge strong{font-size:23px}.stats-grid{grid-template-columns:repeat(2,1fr)}.stat-number{font-size:32px}.classes-head,.final-cta-inner{display:block}.classes-head .section-copy{margin-top:20px}.class-grid{grid-template-columns:1fr}.class-card{min-height:230px}.why-grid{gap:45px}.why-item{grid-template-columns:40px 1fr auto}.vehicle-image-wrap{height:400px}.vehicle-name{font-size:62px}.process-grid{grid-template-columns:1fr}.process-card,.process-card:nth-child(2){border-right:none;border-bottom:1px solid #d5d7d1}.process-card:last-child{border-bottom:none}.registration-form{padding:23px;border-radius:23px}.option-grid{grid-template-columns:1fr}.locations-grid{grid-template-columns:1fr}.location-card{min-height:280px}.final-cta{padding:75px 0}.final-cta .btn{margin-top:30px}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:10px}.mobile-menu a{font-size:32px}}
+</style>
+</head>
+<body>
+<header class="header" id="header">
+<div class="container header-inner">
+<a href="#" class="logo"><span class="logo-main">MARION VAUPEL</span><span class="logo-sub">Fahrschule</span></a>
+<nav class="nav"><a href="#fuehrerschein">Führerschein</a><a href="#vorteile">Warum wir</a><a href="#fahrzeuge">Fahrzeuge</a><a href="#ablauf">Ablauf</a><a href="#faq">FAQ</a></nav>
+<div class="header-actions"><a href="#anmeldung" class="btn btn-primary">Jetzt anmelden <span class="arrow">→</span></a><button class="mobile-toggle" id="mobileToggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button></div>
+</div>
+</header>
+<div class="mobile-menu" id="mobileMenu"><a href="#fuehrerschein">Führerschein</a><a href="#vorteile">Warum wir</a><a href="#fahrzeuge">Fahrzeuge</a><a href="#ablauf">Ablauf</a><a href="#faq">FAQ</a><a href="#anmeldung">Jetzt anmelden →</a></div>
+
+<section class="hero"><div class="hero-glow"></div><div class="container hero-grid">
+<div class="hero-content reveal"><div class="hero-kicker">Fahrschule in Burgwald & Frankenberg</div><h1>Dein Führerschein. <span>Dein nächster Schritt.</span></h1><p class="hero-description">Moderne Fahrausbildung, flexible Möglichkeiten und persönliche Betreuung – damit du sicher, entspannt und mit einem guten Gefühl auf die Straße kommst.</p><div class="hero-buttons"><a href="#anmeldung" class="btn btn-primary">Führerschein starten <span class="arrow">→</span></a><a href="#fuehrerschein" class="btn" style="border:1px solid rgba(255,255,255,.18);color:white;">Klassen entdecken</a></div><div class="hero-note"><span class="hero-note-dot"></span>Persönlich. Flexibel. Sicher.</div></div>
+<div class="hero-visual reveal"><div class="hero-image"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1400&q=85" alt="Modernes Fahrschulfahrzeug"></div><div class="hero-badge"><strong>100%</strong><span>persönliche<br>Betreuung</span></div></div>
+</div></section>
+
+<section class="stats"><div class="container stats-grid">
+<div class="stat"><div class="stat-number" data-counter="4">0</div><div class="stat-label">Jahrzehnte Erfahrung</div></div>
+<div class="stat"><div class="stat-number" data-counter="10">0</div><div class="stat-label">Führerscheinklassen</div></div>
+<div class="stat"><div class="stat-number" data-counter="2">0</div><div class="stat-label">Standorte</div></div>
+<div class="stat"><div class="stat-number" data-counter="100">0</div><div class="stat-label">Fokus auf dich</div></div>
+</div></section>
+
+<section class="section classes" id="fuehrerschein"><div class="container"><div class="classes-head reveal"><div><div class="section-label">Führerscheinklassen</div><h2 class="section-title">Was möchtest du <span>fahren?</span></h2></div><p class="section-copy">Ob Auto, Motorrad, Roller oder Anhänger: Finde die passende Ausbildung und starte deinen Weg.</p></div>
+<div class="class-grid">
+<article class="class-card reveal"><div><div class="class-number">01 / AUTO</div><div class="class-icon">🚗</div></div><div><div class="class-name">B</div><p class="class-description">Der klassische Autoführerschein.</p></div><div class="class-link">→</div></article>
+<article class="class-card reveal"><div><div class="class-number">02 / MOTORRAD</div><div class="class-icon">🏍️</div></div><div><div class="class-name">A</div><p class="class-description">Freiheit auf zwei Rädern.</p></div><div class="class-link">→</div></article>
+<article class="class-card reveal"><div><div class="class-number">03 / ANHÄNGER</div><div class="class-icon">🚙</div></div><div><div class="class-name">BE</div><p class="class-description">Mehr Möglichkeiten mit Anhänger.</p></div><div class="class-link">→</div></article>
+<article class="class-card reveal"><div><div class="class-number">04 / EINSTIEG</div><div class="class-icon">🛵</div></div><div><div class="class-name">AM</div><p class="class-description">Mobil sein auf zwei Rädern.</p></div><div class="class-link">→</div></article>
+<article class="class-card reveal"><div><div class="class-number">05 / BF17</div><div class="class-icon">🚘</div></div><div><div class="class-name">B17</div><p class="class-description">Autofahren ab 17.</p></div><div class="class-link">→</div></article>
+<article class="class-card reveal"><div><div class="class-number">06 / MOTORRAD</div><div class="class-icon">🏍</div></div><div><div class="class-name">A2</div><p class="class-description">Motorrad mit begrenzter Leistung.</p></div><div class="class-link">→</div></article>
+<article class="class-card reveal"><div><div class="class-number">07 / MOTORRAD</div><div class="class-icon">🏍</div></div><div><div class="class-name">A1</div><p class="class-description">Einstieg in die Motorradwelt.</p></div><div class="class-link">→</div></article>
+<article class="class-card reveal"><div><div class="class-number">08 / ANHÄNGER</div><div class="class-icon">🚗</div></div><div><div class="class-name">B96</div><p class="class-description">Mehr Anhängelast mit Klasse B.</p></div><div class="class-link">→</div></article>
+</div></div></section>
+
+<section class="section why" id="vorteile"><div class="container why-grid"><div class="reveal"><div class="section-label">Warum Marion Vaupel</div><h2 class="section-title">Lernen soll sich <span>nicht wie Lernen anfühlen.</span></h2><p class="why-copy">Eine gute Fahrschule bringt dir nicht nur bei, wie man ein Auto bewegt. Sie gibt dir Sicherheit, Selbstvertrauen und ein gutes Gefühl hinter dem Steuer.</p></div>
+<div class="why-list reveal">
+<div class="why-item"><div class="why-number">01</div><div><h3>Persönliche Betreuung</h3><p>Du bist nicht einfach eine Nummer.</p></div><div class="why-arrow">↗</div></div>
+<div class="why-item"><div class="why-number">02</div><div><h3>Flexible Ausbildung</h3><p>Theorie und Praxis passend zu deinem Alltag.</p></div><div class="why-arrow">↗</div></div>
+<div class="why-item"><div class="why-number">03</div><div><h3>Moderne Fahrzeuge</h3><p>Lerne mit Fahrzeugen, die Spaß machen.</p></div><div class="why-arrow">↗</div></div>
+<div class="why-item"><div class="why-number">04</div><div><h3>Ferien- & Intensivkurse</h3><p>Wenn es schneller gehen soll.</p></div><div class="why-arrow">↗</div></div>
+<div class="why-item"><div class="why-number">05</div><div><h3>Online lernen</h3><p>Theorie flexibel vorbereiten.</p></div><div class="why-arrow">↗</div></div>
+</div></div></section>
+
+<section class="section vehicles" id="fahrzeuge"><div class="container vehicle-layout"><div class="vehicle-image-wrap reveal"><img id="vehicleImage" src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1400&q=85" alt="Fahrschulfahrzeug"><div class="vehicle-tag" id="vehicleTag">Klasse B</div></div>
+<div class="vehicle-info reveal"><div class="vehicle-counter" id="vehicleCounter">01 / 04</div><h2 class="vehicle-name" id="vehicleName">Audi A3</h2><div class="vehicle-meta" id="vehicleMeta"><span class="meta-pill">Klasse B</span><span class="meta-pill">Moderne Ausstattung</span><span class="meta-pill">Schaltung</span></div><p class="vehicle-description" id="vehicleDescription">Modernes, übersichtliches Fahrzeug für eine angenehme und sichere Ausbildung.</p><div class="slider-controls"><button class="slider-btn" id="prevVehicle" aria-label="Vorheriges Fahrzeug">←</button><button class="slider-btn" id="nextVehicle" aria-label="Nächstes Fahrzeug">→</button></div></div></div></section>
+
+<section class="section process" id="ablauf"><div class="container"><div class="reveal"><div class="section-label">Dein Weg zum Führerschein</div><h2 class="section-title">Von der Anmeldung <span>bis zur Straße.</span></h2></div><div class="process-grid">
+<article class="process-card reveal"><div class="process-number">01</div><h3>Klasse auswählen</h3><p>Entscheide dich für die passende Führerscheinklasse.</p></article>
+<article class="process-card reveal"><div class="process-number">02</div><h3>Anmelden</h3><p>Fülle die Anmeldung bequem online aus oder komm persönlich vorbei.</p></article>
+<article class="process-card reveal"><div class="process-number">03</div><h3>Lernen & fahren</h3><p>Theorie verstehen, Praxis erleben und Schritt für Schritt sicherer werden.</p></article>
+<article class="process-card reveal"><div class="process-number">04</div><h3>Prüfung bestehen</h3><p>Gut vorbereitet gehst du in deine Prüfung und auf die Straße.</p></article>
+</div></div></section>
+
+<section class="section registration" id="anmeldung"><div class="container registration-grid"><div class="reveal"><div class="section-label">Jetzt starten</div><h2 class="section-title">Bereit für <span>deinen Führerschein?</span></h2><p class="registration-copy">Beantworte ein paar kurze Fragen. Anschließend kannst du deine Anfrage abschicken und wir melden uns bei dir.</p></div>
+<div class="registration-form reveal"><div class="form-progress"><div class="progress-line active" data-progress="1"></div><div class="progress-line" data-progress="2"></div><div class="progress-line" data-progress="3"></div></div>
+<div class="form-step active" data-step="1"><h3>Was möchtest du fahren?</h3><p>Wähle deine gewünschte Führerscheinklasse.</p><div class="option-grid">
+<div class="option"><input type="radio" name="license" id="licenseB" value="B"><label for="licenseB">🚗 Klasse B</label></div>
+<div class="option"><input type="radio" name="license" id="licenseB17" value="B17"><label for="licenseB17">🚘 BF17</label></div>
+<div class="option"><input type="radio" name="license" id="licenseA" value="A"><label for="licenseA">🏍️ Motorrad</label></div>
+<div class="option"><input type="radio" name="license" id="licenseBE" value="BE"><label for="licenseBE">🚙 Klasse BE</label></div>
+</div><div class="form-actions"><span></span><button class="btn btn-dark" type="button" data-next>Weiter →</button></div></div>
+<div class="form-step" data-step="2"><h3>Wo möchtest du starten?</h3><p>Wähle deinen bevorzugten Standort.</p><div class="option-grid">
+<div class="option"><input type="radio" name="location" id="location1" value="Burgwald"><label for="location1">📍 Burgwald</label></div>
+<div class="option"><input type="radio" name="location" id="location2" value="Frankenberg"><label for="location2">📍 Frankenberg</label></div>
+</div><div class="form-actions"><button class="btn btn-outline" type="button" data-prev>← Zurück</button><button class="btn btn-dark" type="button" data-next>Weiter →</button></div></div>
+<div class="form-step" data-step="3"><h3>Deine Kontaktdaten</h3><p>Damit wir dich erreichen können.</p><div class="form-fields">
+<div class="input-group"><label for="name">Name</label><input type="text" id="name" placeholder="Vor- und Nachname" required></div>
+<div class="input-group"><label for="email">E-Mail</label><input type="email" id="email" placeholder="deine@email.de" required></div>
+<div class="input-group"><label for="phone">Telefon</label><input type="tel" id="phone" placeholder="Telefonnummer"></div>
+</div><div class="form-actions"><button class="btn btn-outline" type="button" data-prev>← Zurück</button><button class="btn btn-primary" type="button" id="submitForm">Anfrage senden →</button></div></div>
+<div class="form-message" id="formSuccess"><div class="success-icon">✓</div><h3>Anfrage erhalten!</h3><p style="margin-top:10px;color:#777;">Vielen Dank. Wir melden uns schnellstmöglich bei dir.</p></div>
+</div></div></section>
+
+<section class="section locations"><div class="container"><div class="reveal"><div class="section-label">Komm vorbei</div><h2 class="section-title">Deine Fahrschule <span>vor Ort.</span></h2></div><div class="locations-grid">
+<article class="location-card reveal"><div class="location-top"><div class="location-icon">📍</div><span>01</span></div><div><h3 class="location-city">Burgwald</h3><p class="location-address">Fahrschule Marion Vaupel</p></div><div class="location-footer"><span class="location-phone">06451 / 24485</span><a href="#anmeldung" class="btn btn-outline" style="min-height:42px;padding:0 16px;font-size:11px;">Kontakt →</a></div></article>
+<article class="location-card reveal"><div class="location-top"><div class="location-icon">📍</div><span>02</span></div><div><h3 class="location-city">Frankenberg</h3><p class="location-address">Fahrschule Marion Vaupel</p></div><div class="location-footer"><span class="location-phone">06451 / 24485</span><a href="#anmeldung" class="btn btn-outline" style="min-height:42px;padding:0 16px;font-size:11px;">Kontakt →</a></div></article>
+</div></div></section>
+
+<section class="section faq" id="faq"><div class="container"><div style="text-align:center;" class="reveal"><div class="section-label">Fragen & Antworten</div><h2 class="section-title" style="margin:auto;">Was möchtest du <span>wissen?</span></h2></div><div class="faq-wrap">
+<div class="faq-item reveal"><button class="faq-question"><span>Ab wann kann ich mich anmelden?</span><span class="faq-plus">+</span></button><div class="faq-answer"><p>Du kannst dich grundsätzlich frühzeitig über deine gewünschte Führerscheinklasse informieren und die Anmeldung vorbereiten. Die konkreten Voraussetzungen hängen von der jeweiligen Klasse ab.</p></div></div>
+<div class="faq-item reveal"><button class="faq-question"><span>Gibt es Ferien- oder Intensivkurse?</span><span class="faq-plus">+</span></button><div class="faq-answer"><p>Ja. Für bestimmte Zeiträume können Theorieeinheiten kompakt gebündelt werden. Frag uns einfach nach den nächsten Terminen.</p></div></div>
+<div class="faq-item reveal"><button class="faq-question"><span>Kann ich die Theorie online vorbereiten?</span><span class="faq-plus">+</span></button><div class="faq-answer"><p>Je nach Ausbildungsmodell stehen dir digitale Möglichkeiten zur Vorbereitung zur Verfügung.</p></div></div>
+<div class="faq-item reveal"><button class="faq-question"><span>Welche Führerscheinklassen werden angeboten?</span><span class="faq-plus">+</span></button><div class="faq-answer"><p>Das Angebot umfasst unter anderem die Klassen B, BF17, A, A1, A2, AM, BE und B96. Die konkrete Ausbildung richtet sich nach deinem persönlichen Ziel.</p></div></div>
+<div class="faq-item reveal"><button class="faq-question"><span>Wie melde ich mich an?</span><span class="faq-plus">+</span></button><div class="faq-answer"><p>Nutze einfach unser digitales Anmeldeformular oder kontaktiere die Fahrschule direkt.</p></div></div>
+</div></div></section>
+
+<section class="final-cta"><div class="container final-cta-inner"><div><h2>Bereit,<br>loszufahren?</h2><p>Dein Führerschein beginnt mit einer Entscheidung. Mach heute den ersten Schritt.</p></div><a href="#anmeldung" class="btn">Jetzt anmelden <span class="arrow">→</span></a></div></section>
+
+<footer class="footer"><div class="container"><div class="footer-grid">
+<div class="footer-brand"><a href="#" class="logo"><span class="logo-main">MARION VAUPEL</span><span class="logo-sub">Fahrschule</span></a><p>Moderne Fahrausbildung mit persönlicher Betreuung und einem klaren Ziel: dich sicher auf die Straße zu bringen.</p></div>
+<div><div class="footer-title">Navigation</div><div class="footer-links"><a href="#fuehrerschein">Führerschein</a><a href="#vorteile">Warum wir</a><a href="#fahrzeuge">Fahrzeuge</a><a href="#ablauf">Ablauf</a></div></div>
+<div><div class="footer-title">Service</div><div class="footer-links"><a href="#anmeldung">Anmeldung</a><a href="#faq">FAQ</a><a href="#">Finanzierung</a><a href="#">Erste Hilfe</a></div></div>
+<div><div class="footer-title">Kontakt</div><div class="footer-links"><a href="tel:+49645124485">06451 / 24485</a><a href="#">E-Mail schreiben</a><a href="#anmeldung">Anfrage senden</a></div></div>
+</div><div class="footer-bottom"><span>© 2026 Fahrschule Marion Vaupel</span><span>Impressum · Datenschutz</span></div></div></footer>
+
+<button class="back-top" id="backTop" aria-label="Nach oben">↑</button>
+
+<script>
+const header=document.getElementById("header");
+window.addEventListener("scroll",()=>{header.classList.toggle("scrolled",window.scrollY>40)});
+
+const mobileToggle=document.getElementById("mobileToggle"),mobileMenu=document.getElementById("mobileMenu");
+mobileToggle.addEventListener("click",()=>mobileMenu.classList.toggle("open"));
+document.querySelectorAll(".mobile-menu a").forEach(link=>link.addEventListener("click",()=>mobileMenu.classList.remove("open")));
+
+const revealObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");revealObserver.unobserve(entry.target)}})},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>revealObserver.observe(el));
+
+const counters=document.querySelectorAll("[data-counter]");
+const counterObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(!entry.isIntersecting)return;const el=entry.target,target=Number(el.dataset.counter);let current=0;const increment=target/40;const timer=setInterval(()=>{current+=increment;if(current>=target){current=target;clearInterval(timer)}el.textContent=Math.floor(current)+(target===100?"%":"+");},30);counterObserver.unobserve(el)})},{threshold:.7});
+counters.forEach(counter=>counterObserver.observe(counter));
+
+const vehicles=[
+{name:"Audi A3",category:"Klasse B",image:"https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1400&q=85",meta:["Klasse B","Moderne Ausstattung","Schaltung"],description:"Modernes, übersichtliches Fahrzeug für eine angenehme und sichere Ausbildung."},
+{name:"Motorrad",category:"Klasse A",image:"https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1400&q=85",meta:["Klasse A","Motorrad","Fahrtraining"],description:"Direktes Fahrgefühl und optimale Voraussetzungen für deine Motorradausbildung."},
+{name:"Honda CB650",category:"Klasse A",image:"https://images.unsplash.com/photo-1558981359-219d6364c9c8?auto=format&fit=crop&w=1400&q=85",meta:["Klasse A","Honda","Motorrad"],description:"Ein vielseitiges Motorrad für eine moderne und abwechslungsreiche Ausbildung."},
+{name:"125er",category:"Klasse A1",image:"https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1400&q=85",meta:["A1","125 ccm","Motorrad"],description:"Der ideale Einstieg in die Welt des motorisierten Zweirads."}
+];
+let vehicleIndex=0;
+const vehicleImage=document.getElementById("vehicleImage"),vehicleName=document.getElementById("vehicleName"),vehicleTag=document.getElementById("vehicleTag"),vehicleCounter=document.getElementById("vehicleCounter"),vehicleMeta=document.getElementById("vehicleMeta"),vehicleDescription=document.getElementById("vehicleDescription");
+function renderVehicle(){const vehicle=vehicles[vehicleIndex];vehicleImage.style.opacity="0";setTimeout(()=>{vehicleImage.src=vehicle.image;vehicleImage.alt=vehicle.name;vehicleImage.style.opacity="1"},180);vehicleName.textContent=vehicle.name;vehicleTag.textContent=vehicle.category;vehicleCounter.textContent=`${String(vehicleIndex+1).padStart(2,"0")} / ${String(vehicles.length).padStart(2,"0")}`;vehicleMeta.innerHTML=vehicle.meta.map(item=>`<span class="meta-pill">${item}</span>`).join("");vehicleDescription.textContent=vehicle.description}
+document.getElementById("nextVehicle").addEventListener("click",()=>{vehicleIndex=(vehicleIndex+1)%vehicles.length;renderVehicle()});
+document.getElementById("prevVehicle").addEventListener("click",()=>{vehicleIndex=(vehicleIndex-1+vehicles.length)%vehicles.length;renderVehicle()});
+
+document.querySelectorAll(".faq-question").forEach(button=>button.addEventListener("click",()=>{const item=button.closest(".faq-item"),isOpen=item.classList.contains("open");document.querySelectorAll(".faq-item").forEach(other=>other.classList.remove("open"));if(!isOpen)item.classList.add("open")}));
+
+let currentStep=1;
+const steps=document.querySelectorAll(".form-step"),progressLines=document.querySelectorAll(".progress-line");
+function showStep(step){currentStep=step;steps.forEach(el=>el.classList.toggle("active",Number(el.dataset.step)===step));progressLines.forEach((line,index)=>line.classList.toggle("active",index<step))}
+function validateStep(step){if(step===1)return!!document.querySelector('input[name="license"]:checked');if(step===2)return!!document.querySelector('input[name="location"]:checked');return true}
+document.querySelectorAll("[data-next]").forEach(button=>button.addEventListener("click",()=>{if(!validateStep(currentStep)){alert("Bitte triff zuerst eine Auswahl.");return}if(currentStep<3)showStep(currentStep+1)}));
+document.querySelectorAll("[data-prev]").forEach(button=>button.addEventListener("click",()=>{if(currentStep>1)showStep(currentStep-1)}));
+document.getElementById("submitForm").addEventListener("click",()=>{const name=document.getElementById("name"),email=document.getElementById("email");if(!name.value.trim()||!email.value.trim()){alert("Bitte fülle Name und E-Mail aus.");return}document.querySelector('.form-step[data-step="3"]').style.display="none";document.querySelector(".form-progress").style.display="none";document.getElementById("formSuccess").classList.add("show")});
+
+const backTop=document.getElementById("backTop");
+window.addEventListener("scroll",()=>backTop.classList.toggle("show",window.scrollY>700));
+backTop.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>anchor.addEventListener("click",function(event){const target=document.querySelector(this.getAttribute("href"));if(!target)return;event.preventDefault();target.scrollIntoView({behavior:"smooth",block:"start"})}));
+</script>
+</body>
+</html>
